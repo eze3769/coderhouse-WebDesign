@@ -1,0 +1,39 @@
+html{
+    font-family: $fuente-principal;
+    }
+h1 {
+    @include fontMixin(32px,20px,left, $color-oscuro);
+
+    @media screen and (min-width:$breakpoint-large){
+        padding:20px 40px;
+        font-size:44px;
+    }
+}
+h2{
+    @include fontMixin(28px,20px,center, $color-azul);
+
+    background: $color-celeste;
+    @media screen and (min-width:$breakpoint-small){
+        background:unset;
+    }
+    @media screen and (min-width:$breakpoint-large){
+        padding:20px 40px;
+        font-size:32px;
+    }
+}
+h3{
+    @include fontMixin(22px,20px,left, $color-oscuro);
+
+    margin-top: 30px;
+    @media screen and (min-width:$breakpoint-large){
+        padding: 20px 40px;
+        font-size:26px;
+    }
+}
+p{
+    @include fontMixin(18px,18px,unset, $color-oscuro);
+
+    @media screen and (min-width:$breakpoint-large){
+        font-size:22px;
+    }
+}

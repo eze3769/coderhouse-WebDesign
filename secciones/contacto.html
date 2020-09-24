@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta description="Comuniquese con el equipo de asesoramiento técnico de JE-Tech y evacúe todas sus dudas.">
+    <meta name="keywords" content="soluciones, informatica, software, asesoramiento, consultoria, equipamiento, empresas, emprendimiento, diseño, programacion, tecnologia">
+    <title>Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/031f70e06c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../img/logo gif 200x200.gif" alt="logo" class="header__logo"></a>
+        <nav>
+            <ul class="nav__menu">
+                <li>
+                    <i class="fas fa-bars nav__menuIcon"></i>
+        
+                    <ul class="nav__menuList">
+                        <li class="nav__menuListItem"><a class="nav__menuLink" href="../index.html">Principal</a></li>
+                        <li class="nav__menuListItem"><a class="nav__menuLink" href="servicios.html">Servicios</a></li>
+                        <li class="nav__menuListItem"><a class="nav__menuLink" href="nosotros.html">Nosotros</a></li>
+                        <li class="nav__menuListItem"><a class="nav__menuLink" href="staff.html">Staff</a></li>
+                        <li class="nav__menuListItem"><a class="nav__menuLink" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        
+        </nav>
+        <div class="socialLinks">
+            <ul class="socialLinks__list">
+                <li class="socialLinks__listItem"><a class="socialLinks__link"  href="https://youtube.com"></i><i class="fab fa-youtube-square"></i></a></li>
+                <li class="socialLinks__listItem"><a class="socialLinks__link"  href="https://fb.com"><i class="fab fa-facebook-square"></i></a></li>
+                <li class="socialLinks__listItem"><a class="socialLinks__link" href="https://twitter.com"><i class="fab fa-twitter-square"></i></a></li>
+                <li class="socialLinks__listItem"><a class="socialLinks__link" href="https:/instagram.com"><i class="fab fa-instagram-square"></i></a></li>
+            </ul>
+        </div>
+</header>
+    <section>
+        <h1 class="contacto__title">Contacto</h1>
+    
+    </section>
+   
+    <section class="contacto">
+    <form class="form">
+        <div class="form__div">
+            <label for="nombre" class="form__label">Nombre</label>
+            <input type="text" name="nombre" id="nombre" class="form__input" required>
+        </div>
+        <div class="form__div">
+            <label for="apellido" class="form__label">Apellido</label>
+            <input type="text" name="apellido" id="apellido" class="form__input" required>
+        </div>
+        <div class="form__div">
+            <label for="email" class="form__label">Correo Electrónico</label>
+            <input type="email" name="email" id="email" class="form__input" required>
+        </div>
+        <div class="form__div">
+            <label for="estadoCivil" class="form__label">Estado Civil</label>
+            <select name="estadoCivil" class="form__select">
+                <option value="soltero">Soltero/a</option>
+                <option value="casado">Casado/a</option>
+                <option value="otro">Otros</option>
+            </select>
+        </div>
+        <div class="form__div--news">
+            <label for="aceptaNews" class="form__label">¿Desea recibir el Newsletter?</label>
+            <input type="checkbox" name="aceptanews" value="1" class="form__input">
+        </div>
+        <div class="form__div">
+            <label for="comentarios" class="form_label">Comentarios</label>
+            <textarea class="form__textarea" rows="5" cols="55" name="comentarios" placeholder="Ingrese aquí su mensaje.."></textarea>
+        </div>
+        <div class="form__div--button">
+            <input type="submit" value="Enviar" class="form__input">
+            <input type="reset" value="Limpiar" class="form__input">
+        </div>
+    </form>
+    <div class="ubicacion">
+    <div class="ubicacion__mapa">
+        <iframe class="ubicacion__mapaIframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4734.736303018255!2d-60.63342087338707!3d-32.95195597773805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1599316066813!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+        <div class="ubicacion__direccion">
+            <p class="ubicacion__direccionText">Av Evergreen 742</p>
+            <p class="ubicacion__direccionText">(2000) Rosario, Santa Fe, Argentina</p>
+            <p class="ubicacion__direccionText">TEL: (0341)4123456</p>
+
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <p class="footer__text">Copyright 2020. Todos los Derechos Registrados</p>
+    </footer>
+</body>
+</html>

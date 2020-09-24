@@ -1,0 +1,10 @@
+%button{
+    color: $color-fondo;
+    background: $color-azul;
+    transition: all 0.2s;
+    &:hover{
+        color: $color-oscuro ;
+        transform:scale(1.15);
+        background:#e0e0e0;
+    }
+}

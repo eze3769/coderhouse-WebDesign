@@ -1,0 +1,108 @@
+
+/*---------------------- Header---------------------*/
+header {
+    background-color:$color-azul;
+    .header__logo{
+        width:100px;
+        padding:5px;
+        @media screen and (min-width:$breakpoint-large){
+            width:150px;
+        }
+    }
+}
+/* ---------------------- Nav ----------------------*/
+.nav__menu{
+    &:hover .nav__menuList{
+        max-height: 100%;
+        max-width: 100%;
+        }
+
+    .nav__menuIcon{
+        color: $color-fondo;
+        position:absolute;
+        font-size:28px;
+        padding:20px;
+        padding-left:30px;
+        right:0px;
+        top:45px;
+        @media screen and (min-width:$breakpoint-small){
+            display:none;
+        }
+    }
+    .nav__menuList{
+        max-height: 0;
+        max-width: 0;
+        overflow: hidden;
+        position: absolute;
+        right:0;
+        top:105px;
+        transition: max-height 1.2s, max-width 1.5s;
+        @media screen and (min-width:$breakpoint-small){
+            max-width: 100%;
+            max-height: 100%;
+            top:65px;
+        }
+        @media screen and (min-width:$breakpoint-large){
+            top:115px;
+        }
+
+        .nav__menuListItem{
+            background: $color-azul;
+            font-size:24px;
+            padding:10px 20px;
+            border-top:2px solid $color-fondo;
+            
+            
+            @media screen and (min-width:$breakpoint-small){
+                display: inline-block;
+                font-size:20px;
+                padding: 5px;
+                background: unset;
+                border:unset;
+            }
+            .nav__menuLink{
+                padding:10px 40px;
+                @extend %button;
+                
+                
+                @media screen and (min-width:$breakpoint-small){
+                    padding: 5px 10px;
+                    border-radius:5px;
+                }
+            }
+            
+        }
+    }
+}
+
+/* --------------------Redes ------------------------ */
+.socialLinks__list{
+    position:absolute;
+    right:10px;
+    top:5px;
+
+.socialLinks__listItem{
+    display:inline-block;
+    padding:5px;
+    
+
+    .socialLinks__link i{
+    font-size:28px;
+    position:relative;
+    border-radius: 5px;
+    padding:2px;
+    @extend %button;
+        
+    }
+
+}
+}
+/* ------------------ Footer --------------------- */
+footer {
+    .footer__text{
+    text-align:center;
+    font-size: 14px;
+    font-weight: 200;
+    background: $color-celeste;
+}
+}

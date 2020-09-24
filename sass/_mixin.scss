@@ -1,0 +1,6 @@
+@mixin fontMixin($size,$padding,$align,$color){
+    font-size: $size;
+    padding: $padding;
+    color: $color;
+    text-align: $align;
+}

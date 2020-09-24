@@ -1,0 +1,269 @@
+/*   ------------ Seteos Iniciales ----------------      */
+
+
+
+
+
+
+
+
+
+/* -----------------navegación ----------------- */
+
+
+
+  
+/**  -------------------- General: Textos ----------------------**/
+
+ 
+
+
+
+
+
+
+/*  --------------------------------- Display de 768p max --------------------------------------- */
+@media only screen and (min-width:768px){
+    
+
+    /*Encabezado */
+
+    .logo{
+        width:150px;
+    }
+
+    /*Navegación*/
+    nav i{
+        top:95px;
+    }
+    .menuOculto{
+        top:155px;
+    }
+    .redes ul li a i{
+        font-size:38px;
+    }
+
+    /* Textos*/
+    h1{
+        font-size: 42px;    
+    }
+    h2{
+        font-size: 38px;   
+    }
+    h3{
+        font-size: 24px;    
+    }
+    p{
+        font-size:20px;
+    }
+    
+    /* Sección Principal*/
+    .noticias ul li p {
+        background: unset;
+    
+    }
+  
+    .novedades{
+        grid-template-rows:1fr 1fr;
+        grid-template-areas: 
+        "noti1 noti2"
+        "noti3 noti4";
+    }
+    
+    /* Sección Staff */
+    .personal {
+    padding:10px;
+    display: flex;
+    justify-content: space-around;
+
+    flex-wrap:nowrap;
+    }   
+    .personal li img{
+        width: 22vw;
+    }
+
+    .personal p{
+        text-align: center;
+        font-weight: 600;
+        padding: 10px;
+    }
+
+    /* Sección Contacto */
+    .contacto {
+        flex-direction: row;
+        flex-wrap:nowrap;
+        justify-content: space-between;
+    }
+    .contacto form{
+        width:40vw;
+        justify-items: flex-start;
+    }
+    .contacto .comentarios textarea{
+        width:35vw;
+    }
+    .contacto label,select,textarea,input{
+
+        font-size: 20px;
+    }
+    .contacto input, select{
+        width:35vw;
+        margin-bottom:20px;
+    }
+    .aceptaNews label{
+        width:380px;
+        margin-bottom: 20px;
+    }
+    .botones{
+        width:35vw;
+        padding:20px;
+    }
+    .contacto .botones input {
+        width: 40%;
+        border-radius: 10px;
+    }
+    .ubicacion{
+        align-self: flex-start;
+    }
+    .ubicacion iframe{
+        width:55vw;
+        padding:20px;
+   
+    }
+}
+/* ----------------------------------------Responsive 1024p -----------------------------*/
+@media only screen and (min-width:1024px){
+/*Encabezado */
+.logo{
+    width:180px;
+    padding:10px;
+}
+/* Navegación */
+.menu li i{
+    display:none;
+}
+.menuOculto{
+    display: flex;
+    max-height: unset;
+    max-width: unset;
+    top:140px;
+    
+}
+.menuOculto li{
+    border:none;
+    border-radius:3px;
+    background:none;
+    padding:0;
+}
+.menuOculto li a{
+    padding:10px;
+}
+/* General: Textos */
+
+ 
+h1 {
+    text-align:left;
+    font-size: 48px;
+    padding: 20px 40px;
+}
+h2{
+    font-size:36px;
+    padding: 10px 40px;
+    text-align:center;
+    background: unset;
+}
+h3{
+    font-size: 24px;
+    text-align:left;
+    margin-top: 30px;
+    padding: 10px 40px;
+}
+p{
+    font-size: 22px;
+
+}
+
+/* Sección Principal*/
+.noticias ul li p {
+    padding:40px;
+}
+
+.novedades{
+    display:grid;
+    grid-template-areas: 
+    "noti1 noti2"
+    "noti3 noti4"      ;
+    animation-name:muestreo;
+    animation-iteration-count:infinite;
+    animation-duration:7s;
+
+    
+}
+
+
+@keyframes muestreo{
+    0%{
+        grid-template-areas: 
+        "noti1 noti2"
+        "noti3 noti4";   
+    }
+    25%{
+        grid-template-areas: 
+        "noti4 noti1"
+        "noti2 noti3";
+    }
+    50%{
+        grid-template-areas: 
+        "noti3 noti4"
+        "noti1 noti2";
+    }
+    75%{
+        grid-template-areas: 
+        "noti2 noti3"
+        "noti4 noti1";
+    }
+    100%{
+        grid-template-areas: 
+        "noti1 noti2"
+        "noti3 noti4";
+    }
+
+
+}
+/*Sección Servicios*/
+.servicios ul li p{
+    padding:40px;
+}
+/*Sección Nosotros */
+.nosotros ul li p{
+    padding:40px;
+}
+
+/*Sección Staff */
+.personal{
+    padding:0;
+}
+.dedicatoriaPersonal{
+    padding:40px 0;
+}
+.personal li img{
+    width: 25vw;
+}
+/*Sección Contacto*/
+.contacto{
+    padding:40px;
+}
+.contacto form{
+    padding:0px;
+}
+.ubicacion iframe{
+    width:50vw;
+    padding-right:40px;
+}
+
+/* Redes */
+.redes ul li a i{
+    font-size:44px;
+}
+
+
+}
