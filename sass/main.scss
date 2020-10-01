@@ -127,51 +127,122 @@ body{
     }
 }
     /* -----------Sección Staff------------- */
-
-.staff {
-    display: block;
-    padding:20px;
-    @media screen and (min-width:$breakpoint-large){
-        padding:40px;
-    }
-   
-
-    .staff__list {
-        display:flex;
-        flex-wrap:wrap;
-        justify-content: center;
-        @media screen and (min-width:$breakpoint-small){
-            justify-content: space-around;
-        }
+.staff__container{
+    .staff {
+        display: block;
+        padding:20px;
         @media screen and (min-width:$breakpoint-large){
-            justify-content: space-between;
+            padding:40px;
         }
-        .staff__listItem {
-            padding:20px;
-            @media screen and (min-width:$breakpoint-large){
-                padding:0;
-            }
-            .staff__listText{
-                text-align: center;
-                font-weight: 600;
-            }
-            .staff__listImg{
-                width: 80vw;
-                @media screen and (min-width:$breakpoint-small){
-                    width: 40vw;
-                }
-                @media screen and (min-width:$breakpoint-large){
-                    width:20vw;
-                }
-            }
-        }
-    }
     
-}
-.dedicatoriaStaff .dedicatoriaStaff__text{
-    display:flex;
-    justify-content: center;
-    text-align:center;
+
+        .staff__list {
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            @media screen and (min-width:$breakpoint-small){
+                justify-content: space-around;
+            }
+            @media screen and (min-width:$breakpoint-large){
+                justify-content: space-between;
+            }
+            .staff__listItem {
+                padding:20px;
+
+                @media screen and (min-width:$breakpoint-large){
+                    padding:0;
+                }
+                .staff__listText{
+                    text-align: center;
+                    font-weight: 600;
+                }
+                .staff__listImg{
+                    @extend %img-hover;
+                    width: 80vw;
+                    @media screen and (min-width:$breakpoint-small){
+                        width: 40vw;
+                    }
+                    @media screen and (min-width:$breakpoint-large){
+                        width:20vw;
+                    }
+
+                }
+                .staff__description{
+                    position: absolute;
+
+                    display:flex;
+                    justify-content:center;
+                    width:80vw;
+                    @media screen and (min-width:$breakpoint-small){
+                        width: 40vw;
+                    }
+                    @media screen and (min-width:$breakpoint-large){
+                        width:20vw;
+                    }
+                    .staff__descriptionText{
+                        z-index:-1;
+                        font-size: 22px;
+                        @media screen and (min-width:$breakpoint-large){
+                            font-size: 16px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+    .staff__descriptions{
+        top:0;
+        position: absolute;
+        visibility: hidden;;
+        display:flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+           
+        
+        .descriptions__data{
+            position:relative;
+            display:none;
+            background: $color-azul;
+            padding:20px;
+            .description__listItem--close{
+                top:5px;
+                right: 5px;
+                position:absolute;
+                i{
+                    font-size: 22px;
+                    padding:5px;
+                    
+                    color:$color-fondo;
+                    transition: all 0.2s;
+                    &:hover{
+                        transform:scale(1.1);
+        }
+                }
+            }
+            
+        }
+        #alapidus:target{
+            @extend %staff-target;
+        }
+        #caquino:target{
+            @extend %staff-target;
+        }
+        #mandrada:target{
+            @extend %staff-target;
+        }
+        #cdiaz:target{
+            @extend %staff-target;
+        }
+           
+    }
+    .dedicatoriaStaff .dedicatoriaStaff__text{
+        display:flex;
+        justify-content: center;
+        text-align:center;
+    }
 }
 
 /* ---------- Formulario de Contacto ------------ */

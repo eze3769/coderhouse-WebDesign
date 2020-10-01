@@ -1,14 +1,39 @@
 @charset "UTF-8";
 /* Colores */
-.contacto .form .form__div--button .form__input, .socialLinks__list .socialLinks__listItem .socialLinks__link i, .nav__menu .nav__menuList .nav__menuListItem .nav__menuLink {
+.contacto .form .form__div--button .form__input, .socialLinks__list .socialLinks__listItem .socialLinks__link i {
   color: #f6f6f6;
   background: #597d9f;
   transition: all 0.2s;
 }
-.contacto .form .form__div--button .form__input:hover, .socialLinks__list .socialLinks__listItem .socialLinks__link i:hover, .nav__menu .nav__menuList .nav__menuListItem .nav__menuLink:hover {
+.contacto .form .form__div--button .form__input:hover, .socialLinks__list .socialLinks__listItem .socialLinks__link i:hover {
   color: #30373f;
   transform: scale(1.15);
   background: #e0e0e0;
+}
+
+.staff__container .staff .staff__list .staff__listItem .staff__listImg {
+  transition: all 0.2s;
+}
+.staff__container .staff .staff__list .staff__listItem .staff__listImg:hover {
+  opacity: 0.6;
+  transform: scale(1.15);
+}
+
+.staff__container .staff__descriptions #cdiaz:target, .staff__container .staff__descriptions #mandrada:target, .staff__container .staff__descriptions #caquino:target, .staff__container .staff__descriptions #alapidus:target {
+  visibility: visible;
+  display: flex;
+  font-size: 16px;
+  flex-direction: column;
+  border: solid 2px #f6f6f6;
+  align-self: center;
+}
+
+.description__listItem {
+  display: flex;
+  flex-direction: row;
+}
+.description__listItem .description__text {
+  color: #f6f6f6;
 }
 
 /* Seteo */
@@ -41,9 +66,17 @@ header .header__logo {
 }
 
 /* ---------------------- Nav ----------------------*/
-.nav__menu:hover .nav__menuList {
-  max-height: 100%;
-  max-width: 100%;
+.nav__menu #menu:target {
+  top: 0;
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1f1f1f;
+  opacity: 0.85;
+  height: 100vh;
+  width: 100vw;
 }
 .nav__menu .nav__menuIcon {
   color: #f6f6f6;
@@ -53,6 +86,11 @@ header .header__logo {
   padding-left: 30px;
   right: 0px;
   top: 45px;
+  transition: all 0.2s;
+}
+.nav__menu .nav__menuIcon:hover {
+  color: #ededed;
+  transform: scale(1.1);
 }
 @media screen and (min-width: 768px) {
   .nav__menu .nav__menuIcon {
@@ -60,43 +98,55 @@ header .header__logo {
   }
 }
 .nav__menu .nav__menuList {
-  max-height: 0;
-  max-width: 0;
-  overflow: hidden;
+  display: none;
+  padding-top: 100px;
+}
+.nav__menu .nav__menuList .nav__menuListItem--close {
   position: absolute;
-  right: 0;
-  top: 105px;
-  transition: max-height 1.2s, max-width 1.5s;
+  top: 0;
+  right: 10px;
 }
 @media screen and (min-width: 768px) {
   .nav__menu .nav__menuList {
-    max-width: 100%;
-    max-height: 100%;
-    top: 65px;
+    display: inline-block;
+    padding: 5px;
+    right: 0;
+    top: 60px;
+    position: absolute;
   }
 }
 @media screen and (min-width: 1024px) {
   .nav__menu .nav__menuList {
-    top: 115px;
+    right: 0;
+    top: 110px;
   }
 }
 .nav__menu .nav__menuList .nav__menuListItem {
-  background: #597d9f;
   font-size: 24px;
-  padding: 10px 20px;
-  border-top: 2px solid #f6f6f6;
+  padding: 20px;
+  transition: all 0.2;
+}
+.nav__menu .nav__menuList .nav__menuListItem:hover {
+  border-top: solid 2px #f6f6f6;
+  border-bottom: solid 2px #f6f6f6;
+  transform: scale(1.2);
+  color: #ededed;
+}
+@media screen and (min-width: 768px) {
+  .nav__menu .nav__menuList .nav__menuListItem:hover {
+    border: none;
+  }
 }
 @media screen and (min-width: 768px) {
   .nav__menu .nav__menuList .nav__menuListItem {
     display: inline-block;
     font-size: 20px;
     padding: 5px;
-    background: unset;
-    border: unset;
   }
 }
 .nav__menu .nav__menuList .nav__menuListItem .nav__menuLink {
-  padding: 10px 40px;
+  padding: 10px 40vw;
+  color: #f6f6f6;
 }
 @media screen and (min-width: 768px) {
   .nav__menu .nav__menuList .nav__menuListItem .nav__menuLink {
@@ -309,57 +359,110 @@ body {
 }
 
 /* -----------Sección Staff------------- */
-.staff {
+.staff__container .staff {
   display: block;
   padding: 20px;
 }
 @media screen and (min-width: 1024px) {
-  .staff {
+  .staff__container .staff {
     padding: 40px;
   }
 }
-.staff .staff__list {
+.staff__container .staff .staff__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 @media screen and (min-width: 768px) {
-  .staff .staff__list {
+  .staff__container .staff .staff__list {
     justify-content: space-around;
   }
 }
 @media screen and (min-width: 1024px) {
-  .staff .staff__list {
+  .staff__container .staff .staff__list {
     justify-content: space-between;
   }
 }
-.staff .staff__list .staff__listItem {
+.staff__container .staff .staff__list .staff__listItem {
   padding: 20px;
 }
 @media screen and (min-width: 1024px) {
-  .staff .staff__list .staff__listItem {
+  .staff__container .staff .staff__list .staff__listItem {
     padding: 0;
   }
 }
-.staff .staff__list .staff__listItem .staff__listText {
+.staff__container .staff .staff__list .staff__listItem .staff__listText {
   text-align: center;
   font-weight: 600;
 }
-.staff .staff__list .staff__listItem .staff__listImg {
+.staff__container .staff .staff__list .staff__listItem .staff__listImg {
   width: 80vw;
 }
 @media screen and (min-width: 768px) {
-  .staff .staff__list .staff__listItem .staff__listImg {
+  .staff__container .staff .staff__list .staff__listItem .staff__listImg {
     width: 40vw;
   }
 }
 @media screen and (min-width: 1024px) {
-  .staff .staff__list .staff__listItem .staff__listImg {
+  .staff__container .staff .staff__list .staff__listItem .staff__listImg {
     width: 20vw;
   }
 }
-
-.dedicatoriaStaff .dedicatoriaStaff__text {
+.staff__container .staff .staff__list .staff__listItem .staff__description {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+}
+@media screen and (min-width: 768px) {
+  .staff__container .staff .staff__list .staff__listItem .staff__description {
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .staff__container .staff .staff__list .staff__listItem .staff__description {
+    width: 20vw;
+  }
+}
+.staff__container .staff .staff__list .staff__listItem .staff__description .staff__descriptionText {
+  z-index: -1;
+  font-size: 22px;
+}
+@media screen and (min-width: 1024px) {
+  .staff__container .staff .staff__list .staff__listItem .staff__description .staff__descriptionText {
+    font-size: 16px;
+  }
+}
+.staff__container .staff__descriptions {
+  top: 0;
+  position: absolute;
+  visibility: hidden;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+}
+.staff__container .staff__descriptions .descriptions__data {
+  position: relative;
+  display: none;
+  background: #597d9f;
+  padding: 20px;
+}
+.staff__container .staff__descriptions .descriptions__data .description__listItem--close {
+  top: 5px;
+  right: 5px;
+  position: absolute;
+}
+.staff__container .staff__descriptions .descriptions__data .description__listItem--close i {
+  font-size: 22px;
+  padding: 5px;
+  color: #f6f6f6;
+  transition: all 0.2s;
+}
+.staff__container .staff__descriptions .descriptions__data .description__listItem--close i:hover {
+  transform: scale(1.1);
+}
+.staff__container .dedicatoriaStaff .dedicatoriaStaff__text {
   display: flex;
   justify-content: center;
   text-align: center;
