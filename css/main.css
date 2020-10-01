@@ -340,7 +340,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .servicios .servicios__list {
-    padding: 40px;
+    padding: 0 40px;
   }
 }
 .servicios .servicios__list .servicios__listItem {

@@ -107,7 +107,7 @@ body{
     .servicios__list{
         padding:20px 0;
         @media screen and (min-width:$breakpoint-large){
-            padding:40px;
+            padding:0 40px;
         }
         .servicios__listItem{
             margin-bottom:20px;
