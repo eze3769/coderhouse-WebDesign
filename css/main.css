@@ -336,7 +336,7 @@ body {
 
 /* -----------Sección Servicios--------- */
 .servicios .servicios__list {
-  padding: 20px;
+  padding: 20px 0;
 }
 @media screen and (min-width: 1024px) {
   .servicios .servicios__list {
