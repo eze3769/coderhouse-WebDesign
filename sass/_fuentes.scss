@@ -10,7 +10,7 @@ h1 {
     }
 }
 h2{
-    @include fontMixin(28px,20px,center, $color-azul);
+    @include fontMixin(28px,20px,center, $color-subtitle);
 
     background: $color-celeste;
     @media screen and (min-width:$breakpoint-small){
@@ -31,7 +31,7 @@ h3{
     }
 }
 p{
-    @include fontMixin(18px,18px,unset, $color-oscuro);
+    @include fontMixin(18px,20px,unset, $color-oscuro);
 
     @media screen and (min-width:$breakpoint-large){
         font-size:22px;

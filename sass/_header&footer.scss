@@ -1,7 +1,7 @@
 
 /*---------------------- Header---------------------*/
 header {
-    background-color:$color-azul;
+    background-color:$color-nav;
     .header__logo{
         width:100px;
         padding:5px;
@@ -129,6 +129,7 @@ footer {
     text-align:center;
     font-size: 14px;
     font-weight: 200;
-    background: $color-celeste;
+    background: $color-nav;
+    color: $color-fondo;
 }
 }
